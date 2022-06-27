@@ -1,0 +1,6 @@
+#Zhao.Pan@MULTIMEDIA.AUDIODRIVER.KERNEL, 2021/08/16, Add for multimedia kevent feedback driver
+config OPLUS_FEATURE_MM_FEEDBACK
+  tristate "Oplus multimedia kevent feedback"
+  default n
+  help
+    define this config to init oplus multimedia kevent feedback driver

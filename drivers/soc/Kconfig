@@ -1,0 +1,66 @@
+# SPDX-License-Identifier: GPL-2.0-only
+menu "SOC (System On Chip) specific Drivers"
+
+source "drivers/soc/actions/Kconfig"
+source "drivers/soc/amlogic/Kconfig"
+source "drivers/soc/aspeed/Kconfig"
+source "drivers/soc/atmel/Kconfig"
+source "drivers/soc/bcm/Kconfig"
+source "drivers/soc/fsl/Kconfig"
+source "drivers/soc/imx/Kconfig"
+source "drivers/soc/ixp4xx/Kconfig"
+source "drivers/soc/mediatek/Kconfig"
+source "drivers/soc/qcom/Kconfig"
+source "drivers/soc/renesas/Kconfig"
+source "drivers/soc/rockchip/Kconfig"
+source "drivers/soc/samsung/Kconfig"
+source "drivers/soc/sifive/Kconfig"
+source "drivers/soc/sunxi/Kconfig"
+source "drivers/soc/tegra/Kconfig"
+source "drivers/soc/ti/Kconfig"
+source "drivers/soc/ux500/Kconfig"
+source "drivers/soc/versatile/Kconfig"
+source "drivers/soc/xilinx/Kconfig"
+source "drivers/soc/zte/Kconfig"
+source "drivers/soc/kendryte/Kconfig"
+
+#ifdef OPLUS_FEATURE_SUGOV_POWER_EFFIENCY
+source "drivers/soc/oplus/cpufreq_effiency/Kconfig"
+#endif /* OPLUS_FEATURE_SUGOV_POWER_EFFIENCY */
+
+#ifdef OPLUS_BUG_STABILITY
+#zhongyun@BSP.Kernel.Stability 2021/06/16 add for oplus kernel system
+source "drivers/soc/oplus/system/Kconfig"
+#endif /* OPLUS_BUG_STABILITY */
+
+#ifdef OPLUS_FEATURE_TP_BASIC
+source "drivers/soc/oplus/device_info/Kconfig"
+#endif /* OPLUS_FEATURE_TP_BASIC */
+
+#ifdef OPLUS_FEATURE_SENSOR_SMEM
+#laq@BSP.Sensor.Basic 2021/07/08 add for oplus sensor smem
+source "drivers/soc/oplus/sensor/Kconfig"
+#endif /* OPLUS_FEATURE_SENSOR_SMEM */
+
+#ifdef OPLUS_FEATURE_OCH
+source "drivers/soc/oplus/power/cpufreq_health/Kconfig"
+#endif /* OPLUS_FEATURE_OCH */
+
+#ifdef OPLUS_FEATURE_THERMAL_HORAE
+#Jay.Fan@BSP.Power.Thermal 2021/08/09, add for horae thermal
+source "drivers/soc/oplus/thermal/Kconfig"
+#endif /* OPLUS_FEATURE_THERMAL_HORAE */
+
+#ifdef OPLUS_FEATURE_RT_TRACE
+source "drivers/soc/oplus/rt_info/Kconfig"
+#endif /* OPLUS_FEATURE_RT_TRACE */
+
+#ifdef OPLUS_FEATURE_MIDAS_GKI
+source "drivers/soc/oplus/power/midas/Kconfig"
+#endif
+
+#ifdef OPLUS_FEATURE_OMRG
+#Long.Gao@BSP.Power 2021/09/13, add for oplus omrg
+source "drivers/soc/oplus/thermal/oplus_omrg/Kconfig"
+#endif /* OPLUS_FEATURE_OMRG */
+endmenu
